@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatusView" customModule="Spatial_Measure_Kit" customModuleProvider="target">
+            <connections>
+                <outlet property="restartButton" destination="ARa-O4-yfJ" id="gT7-6n-2eI"/>
+                <outlet property="textLabel" destination="Seh-LE-KpR" id="85v-kv-Ndb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="589" height="95"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvM-wl-2cR" customClass="DesignableView" customModule="Spatial_Measure_Kit" customModuleProvider="target">
+                    <rect key="frame" x="473" y="0.0" width="116" height="95"/>
+                    <subviews>
+                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p78-Zx-ApN">
+                            <rect key="frame" x="0.0" y="0.0" width="116" height="95"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="peW-i3-037">
+                                <rect key="frame" x="0.0" y="0.0" width="116" height="95"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ue-8c-OFb">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="95"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XHe-3V-pJK">
+                                            <rect key="frame" x="0.0" y="0.0" width="116" height="95"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem I" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Seh-LE-KpR">
+                                                    <rect key="frame" x="8" y="8" width="48" height="79"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARa-O4-yfJ">
+                                                    <rect key="frame" x="64" y="25" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="OKI-bN-ykt"/>
+                                                        <constraint firstAttribute="height" constant="44" id="rgR-v5-xmh"/>
+                                                    </constraints>
+                                                    <state key="normal" image="refresh"/>
+                                                    <connections>
+                                                        <action selector="restart:" destination="-1" eventType="touchUpInside" id="Ozn-z4-Uui"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ARa-O4-yfJ" secondAttribute="trailing" constant="8" id="2QI-Yc-ocY"/>
+                                                <constraint firstItem="Seh-LE-KpR" firstAttribute="top" secondItem="XHe-3V-pJK" secondAttribute="top" constant="8" id="4Zc-ge-Rja"/>
+                                                <constraint firstAttribute="bottom" secondItem="Seh-LE-KpR" secondAttribute="bottom" constant="8" id="CHh-w8-ixz"/>
+                                                <constraint firstItem="Seh-LE-KpR" firstAttribute="leading" secondItem="XHe-3V-pJK" secondAttribute="leading" constant="8" id="OdP-1g-uvV"/>
+                                                <constraint firstItem="ARa-O4-yfJ" firstAttribute="leading" secondItem="Seh-LE-KpR" secondAttribute="trailing" constant="8" id="aUh-6W-1wP"/>
+                                                <constraint firstItem="ARa-O4-yfJ" firstAttribute="centerY" secondItem="XHe-3V-pJK" secondAttribute="centerY" id="bNH-ry-4Eh"/>
+                                            </constraints>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.39739404965753422" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <vibrancyEffect>
+                                            <blurEffect style="dark"/>
+                                        </vibrancyEffect>
+                                    </visualEffectView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7ue-8c-OFb" firstAttribute="top" secondItem="peW-i3-037" secondAttribute="top" id="DhO-6y-ORE"/>
+                                    <constraint firstItem="7ue-8c-OFb" firstAttribute="leading" secondItem="peW-i3-037" secondAttribute="leading" id="LzM-DI-rKK"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ue-8c-OFb" secondAttribute="trailing" id="UKz-9O-2t6"/>
+                                    <constraint firstAttribute="bottom" secondItem="7ue-8c-OFb" secondAttribute="bottom" id="t7X-Al-tYW"/>
+                                </constraints>
+                            </view>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <blurEffect style="light"/>
+                        </visualEffectView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="p78-Zx-ApN" firstAttribute="leading" secondItem="RvM-wl-2cR" secondAttribute="leading" id="5DT-aw-Oo2"/>
+                        <constraint firstAttribute="bottom" secondItem="p78-Zx-ApN" secondAttribute="bottom" id="AvX-w8-1pQ"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="240" id="HZl-pG-E02"/>
+                        <constraint firstItem="p78-Zx-ApN" firstAttribute="top" secondItem="RvM-wl-2cR" secondAttribute="top" id="iYf-3w-ROS"/>
+                        <constraint firstAttribute="trailing" secondItem="p78-Zx-ApN" secondAttribute="trailing" id="pGe-7O-0ry"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RvM-wl-2cR" secondAttribute="bottom" id="1bW-X6-LYt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RvM-wl-2cR" secondAttribute="trailing" id="WRB-38-aRM"/>
+                <constraint firstItem="RvM-wl-2cR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dRc-lA-OoL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-385.5" y="-208.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="refresh" width="36" height="36"/>
+    </resources>
+</document>

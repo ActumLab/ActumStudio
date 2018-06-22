@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ControlsLayerVC" customModule="ActumStudio_Dev" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="0uy-kw-bli" id="g1x-v8-dVj"/>
+                <outlet property="addButton" destination="ug4-hi-RdU" id="gqm-R4-rqO"/>
+                <outlet property="closeButton" destination="mlj-2y-UTX" id="AEZ-NF-SdH"/>
+                <outlet property="statusView" destination="7Yq-MH-OE2" id="m69-Ob-mPZ"/>
+                <outlet property="trashButton" destination="Rdk-ug-rlL" id="mz4-EB-3Jc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="PassthroughView" customModule="ActumStudio_Dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ug4-hi-RdU">
+                    <rect key="frame" x="145" y="518" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Iy4-3q-4uq"/>
+                        <constraint firstAttribute="height" constant="30" id="bzW-tk-Qa4"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="plus"/>
+                    <connections>
+                        <action selector="loadModel:" destination="-1" eventType="touchUpInside" id="30r-W7-dA9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlj-2y-UTX">
+                    <rect key="frame" x="16" y="36" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0yS-4V-w68"/>
+                        <constraint firstAttribute="width" constant="30" id="27j-zS-cut"/>
+                    </constraints>
+                    <color key="tintColor" name="White"/>
+                    <state key="normal" backgroundImage="close"/>
+                    <connections>
+                        <action selector="close:" destination="-1" eventType="touchUpInside" id="5UW-jE-m1f"/>
+                    </connections>
+                </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="0uy-kw-bli">
+                    <rect key="frame" x="150" y="523" width="20" height="20"/>
+                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yq-MH-OE2" customClass="StatusView" customModule="ActumStudio_Dev" customModuleProvider="target">
+                    <rect key="frame" x="62" y="36" width="242" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="RG6-iN-vT2"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdk-ug-rlL">
+                    <rect key="frame" x="145" y="518" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1XE-85-6XE"/>
+                        <constraint firstAttribute="width" constant="30" id="Go3-JG-z5F"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="trash"/>
+                    <connections>
+                        <action selector="removeModel:" destination="-1" eventType="touchUpInside" id="nzm-nT-BHD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ug4-hi-RdU" secondAttribute="bottom" constant="20" id="2Ub-i7-hyz"/>
+                <constraint firstItem="mlj-2y-UTX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="9Sj-j5-U9v"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Yq-MH-OE2" secondAttribute="trailing" constant="16" id="BLf-ER-0gk"/>
+                <constraint firstItem="Rdk-ug-rlL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="C3D-h4-ytE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Rdk-ug-rlL" secondAttribute="bottom" constant="20" id="LAm-W6-01O"/>
+                <constraint firstItem="mlj-2y-UTX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="RXF-Kq-xil"/>
+                <constraint firstItem="7Yq-MH-OE2" firstAttribute="leading" secondItem="mlj-2y-UTX" secondAttribute="trailing" constant="16" id="Xsq-Ua-al2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0uy-kw-bli" secondAttribute="bottom" constant="25" id="ad6-Bj-CYy"/>
+                <constraint firstItem="0uy-kw-bli" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c0H-88-E82"/>
+                <constraint firstItem="7Yq-MH-OE2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="hLA-LI-qGh"/>
+                <constraint firstItem="ug4-hi-RdU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="y6f-bf-PKe"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-2" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="24" height="24"/>
+        <image name="plus" width="24" height="24"/>
+        <image name="trash" width="24" height="24"/>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

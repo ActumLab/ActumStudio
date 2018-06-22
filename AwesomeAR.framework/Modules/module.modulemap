@@ -1,0 +1,11 @@
+framework module AwesomeAR {
+  umbrella header "AwesomeAR.h"
+
+  export *
+  module * { export * }
+}
+
+module AwesomeAR.Swift {
+    header "AwesomeAR-Swift.h"
+    requires objc
+}
